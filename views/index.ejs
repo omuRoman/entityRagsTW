@@ -1,0 +1,95 @@
+<h1>Hello <%= name%> </h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Entity Rags</title>
+    <meta name="description" content="This is the description">
+    <link rel="stylesheet" href="shop.css" />
+    <script src="shop.js" async></script>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-nav nav"> 
+        </nav>
+        <h1 class="band-name band-name-large">Entity Rags</h1>
+    </header>
+    <section class="container content-section">
+        <h2 class="section-header">MERCH</h2>
+        <div class="shop-items">
+            <div class="shop-item">
+                <span class="shop-item-title">Tricou Nike</span>
+                <img class="shop-item-image" src="t1.jpg">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">65 lei</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+            <div class="shop-item">
+                <span class="shop-item-title">Tricou Albastru</span>
+                <img class="shop-item-image" src="t2.jpg">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">20 lei</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+            <div class="shop-item">
+                <span class="shop-item-title">Tricou Mov</span>
+                <img class="shop-item-image" src="t3.jpg">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">25 lei</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+            <div class="shop-item">
+                <span class="shop-item-title">Tricou Echipa Nationala</span>
+                <img class="shop-item-image" src="t4.jpg">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">300 lei</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container content-section">
+        <div class="shop-items">
+            <div class="shop-item">
+                <span class="shop-item-title">Tricou negru</span>
+                <img class="shop-item-image" src="t5.jpg">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">150 lei</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+            <div class="shop-item">
+                <span class="shop-item-title">Tricou Yamaha</span>
+                <img class="shop-item-image" src="t6.jpg">
+                <div class="shop-item-details">
+                    <span class="shop-item-price">15 lei</span>
+                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container content-section">
+        <h2 class="section-header">CART</h2>
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">ITEM</span>
+            <span class="cart-price cart-header cart-column">PRICE</span>
+            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+        <div class="cart-items">
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <span class="cart-total-price">0 lei</span>
+        </div>
+        <form action = "/sendmail" method = "POST">
+            <button class="btn btn-primary btn-purchase" type="submit">PURCHASE</button>
+        </form>
+    </section>
+</body>
+
+<form action = "/logout?_method=DELETE" method = "POST">
+    <button type= "submit">Log Out</button>
+</form>
+</html>
