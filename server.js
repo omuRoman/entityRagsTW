@@ -37,6 +37,7 @@ connection.connect(function(err){
 })
 
 const users = []
+var contactData = []
 var current_user_email
 
 var sql = "select * from test2"
@@ -116,6 +117,42 @@ app.post('/login', checkNotAuth, passport.authenticate('local', {
 
 app.get('/register', checkNotAuth, (req,res) => {
     res.render('register.ejs')
+})
+
+
+app.post('/contact', checkAuth, (req,res) => {
+    res.render('contact.ejs')
+})
+
+
+app.get('/send_contact', checkAuth, (req,res) => {
+    let nume = req.query.firstname 
+    let prenume = req.query.lastname
+    let subject = req.query.subject
+
+    let text = "nume " + nume +'\n' + "prenume " + prenume + '\n' + subject
+    
+    var mailOptions = {
+        from: 'entityragsProject@gmail.com',
+        to: current_user_email,
+        subject: 'Contact',
+        text: text.toString() 
+      };
+
+    transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+          console.log(error);
+        } else {
+          console.log('Email sent: ' + info.response);
+        }
+      });
+
+      res.redirect('/')
+})
+    
+app.post('/send_contact', checkAuth, (req,res) => {
+
+
 })
 
 app.post('/register', checkNotAuth, async (req,res) => {

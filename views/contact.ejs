@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EntityRags</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="container">
+        <form action = "/send_contact" method = "GET">
+
+            <label for="fname">Prenume</label>
+            <input type="text" id="fname" name="firstname" placeholder="Prenumele tau...">
+            <label for="lname">Nume de familie</label>
+            <input type="text" id="lname" name="lastname" placeholder="Numele tau de familie...">
+
+            <label for="email">Adresa dumneavoastră de email</label>
+            <input type="text" id="email" name="email" placeholder="Introduceți adresa de email....">
+
+            <label for="country">Județ</label>
+            <select id="country" name="country">
+                <option value="alba">Alba</option>
+                <option value="arad">Arad</option>
+                <option value="arges">Argeș</option>
+                <option value="bacau">Bacău</option>
+                <option value="bihor">Bihor</option>
+                <option value="bistrita">Bistrița-Năsăud</option>
+                <option value="botosani">Botoșani</option>
+                <option value="brasov">Brașov</option>
+                <option value="braila">Brăila</option>
+                <option value="bucuresti">București</option>
+                <option value="buzau">Buzău</option>
+                <option value="caras">Caraș-Severin</option>
+                <option value="calarasi">Călărași</option>
+                <option value="cluj">Cluj</option>
+                <option value="constanta">Constanța</option>
+                <option value="covasna">Covasna</option>
+                <option value="dambovita">Dâmbovița</option>
+                <option value="dolj">Dolj</option>
+                <option value="galati">Galați</option>
+                <option value="giurgiu">Giurgiu</option>
+                <option value="gorj">Gorj</option>
+                <option value="harghita">Harghita</option>
+                <option value="hunedoara">Hunedoara</option>
+                <option value="ialomita">Ialomița</option>
+                <option value="iasi">Iași</option>
+                <option value="ilfov">Ilfov</option>
+                <option value="maramures">Maramureș</option>
+                <option value="mehedinti">Mehedinți</option>
+                <option value="mures">Mureș</option>
+                <option value="neamt">Neamț</option>
+                <option value="olt">Olt</option>
+                <option value="prahova">Prahova</option>
+                <option value="satu">Satu Mare</option>
+                <option value="salaj">Sălaj</option>
+                <option value="sibiu">Sibiu</option>
+                <option value="suceava">Suceava</option>
+                <option value="teleorman">Teleorman</option>
+                <option value="timis">Timiș</option>
+                <option value="tulcea">Tulcea</option>
+                <option value="vaslui">Vaslui</option>
+                <option value="valcea">Vâlcea</option>
+                <option value="vrancea">Vrancea</option>
+            </select>
+
+            <label for="oras">Oraș</label>
+            <input type="text" id="oras" name="oras" placeholder="Introduceți numele orașului în care locuiți...."
+
+            <label for="subject">Motivul pentru care ne contactați</label>
+            <textarea id="subject" name="subject" placeholder="Scrie ceva..." style="height:200px"></textarea>
+
+            
+            <button  class="btn btn-primary btn-purchase" type="submit">Submit</button>
+            
+
+        </form>
+    </div>
+</body>
+</html>
+
